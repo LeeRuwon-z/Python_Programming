@@ -1,32 +1,42 @@
-# 비트 연산자
-a = 5           # 0000 0101
-b = 3           # 0000 0011
+# 반복문 : while문, for문
 
-print(a & b)    # 0000 0001     # 둘다 1이면 1
-print(a | b)    # 0000 0111     # 둘 중 하나라도 1이면 1
-print(a ^ b)    # 0000 0110     # 두개가 다르면 1
-print(a << b)   # 5 -> 10 -> 20 -> 40
-print(40 >> b)  # 40 -> 20 -> 10 -> 5
-print(~a)       # 1111 1010 -> 0000 0110 (-6)
+# while문
+# 1~10까지의 반복 출력
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+    if i == 6:
+        break
+else:
+    print("End")
 
-# 멤버십 연산자
-print("a" in "apple")
-print(3 in [1, 2, 3])
+nums = [1, 3, 5, 7, 9]
+target = 2
+i = 0
+# found = False
 
-# 삼항 연산자
-# int max = a > b ? a : b;      # 이게 C문법
-max = a if a > b else b
+while i < len(nums):
+    if nums[i] == target:
+        print(f"{target} found.")
+        # found = True
+    i += 1
+else:
+    print(f"{target} not found.")
 
-# a가 짝수면 "짝수", 홀수면 "홀수"
-print("짝수" if a % 2 == 0 else "홀수")
+# if not found:
+    #print(f"{target} not found.")
 
-# 90점 이상이면 A
-# 80점 이상이면 B
-# 70점 이상이면 C
-# 70점 미만이면 D
-score = 85
+# 1~10까지의 합
+i = 1
+tot = 0
 
-grade = "A" if score >= 90 else "B" if score >= 80 else "C" if score >= 70 else "D"
-print(grade)
-
-
+while i <= 10:
+    # i += 1
+    # if i % 2 == 1:
+    #     continue
+    if i % 2 == 0:
+        tot += i
+    i += 1
+else:
+    print(f"sum : {tot}")
