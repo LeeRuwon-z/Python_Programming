@@ -27,7 +27,7 @@ print(b)
 a.update({3,4})
 print(a)
 
-a.remove()
+a.remove(1)
 # a.pop()
 print(a)
 
